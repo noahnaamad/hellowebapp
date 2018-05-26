@@ -8,11 +8,13 @@
   <h1>Hello Kind World!</h1>
   <h2>{{ post.name }}</h2>
   <p>{{ post.description }}</p>
+  <a href="{% url 'edit_post' slug=post.slug %}">
+    Edit me!
+  </a>
 
   <form>
     <input type="button" value="javascript?" onclick="msg()"/>
   </form>
 
-  <p>{{ number }}</p>
 
 {% endblock content %}
