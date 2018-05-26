@@ -1,20 +1,18 @@
 {% extends 'base.html' %}
 
 {% block title %}
-  Homepage -- {{ block.super }}
+  {{ post.name }} -- {{ block.super }}
 {% endblock title %}
 
 {% block content %}
   <h1>Hello Kind World!</h1>
-  {% for post in posts %}
-    <h2><a href="{% url 'post_detail' slug=post.slug %}">
-      {{ post.name }}
-    </a></h2>
-    <p>{{ post.description }}</p>
-  {% endfor %}
+  <h2>{{ post.name }}</h2>
+  <p>{{ post.description }}</p>
 
   <form>
     <input type="button" value="javascript?" onclick="msg()"/>
   </form>
+
+  <p>{{ number }}</p>
 
 {% endblock content %}
